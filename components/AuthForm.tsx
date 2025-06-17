@@ -112,7 +112,7 @@ const AuthForm = ({ type }: { type: FormType }) => {
             {type === "sign-in" ? "Sign In" : "Sign Up"}
             {isLoading && (
               <Image
-                src="/assets/icons/loader.svg"
+                src="public/assets/icons/loader.svg"
                 alt="loader"
                 width={24}
                 height={24}
@@ -134,7 +134,7 @@ const AuthForm = ({ type }: { type: FormType }) => {
         </form>
       </Form>
 
-      {true && (
+      {accountId && (
         <OTPModal
           email={form.getValues("email")}
           accountId={accountId}  // Correction ici

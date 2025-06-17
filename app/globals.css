@@ -87,6 +87,7 @@
   --color-blue: #56B8FF;
   --color-pink: #EEA8FD;
   --color-orange: #F9AB72;
+  --color-otpslot: #d117171c;
 
   /* Ombres mises à jour selon v4 */
   --shadow-drop-1: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
@@ -357,7 +358,7 @@
 @utility shad-otp-slot {
   font-size: 40px;
   font-weight: 500;
-  border-radius: 0.75rem;
+  border-radius: 0.325rem;
   --tw-ring-color: var(--color-brand);
   box-shadow: var(--shadow-drop-1);
   color: var(--color-brand-100);
@@ -1183,7 +1184,6 @@
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
-  flex: 1;
   gap: 0.25rem;
   color: var(--color-brand);
 }
