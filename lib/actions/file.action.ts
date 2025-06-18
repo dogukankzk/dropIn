@@ -1,11 +1,12 @@
 "use server"
 
-import { ID } from "node-appwrite";
+import { ID, Models, Query } from "node-appwrite";
 import { createAdminClient } from "../appwrite";
 import { appwriteConfig } from "../appwrite/config";
 import { constructFileUrl, getFileType, parseStringify } from "../utils";
 import { InputFile } from "node-appwrite/file";
 import { revalidatePath } from "next/cache";
+import { getCurrentUser } from "./user.actions";
 
 
 const handleError = (error: unknown, message: string) => {
@@ -60,3 +61,36 @@ export const uploadFile = async ({
     handleError(error, "Failed to upload file");
   }
 };
+
+const createQueries = (currentUser: Models.Document) => {
+    // Diagnostic
+    console.log('Current user structure:', JSON.stringify(currentUser, null, 2));
+    
+    const queries = [
+        Query.equal("owner", currentUser.$id)
+    ];
+    
+    return queries;
+}
+
+export const getFile = async () => {
+    const {databases} = await createAdminClient()
+
+    try {
+        const currentUser = await getCurrentUser()
+        if(!currentUser) throw new Error("failed to get the current user")
+
+        const queries = await createQueries(currentUser)
+        
+        const files = await databases.listDocuments(
+            appwriteConfig.databaseId,
+            appwriteConfig.filesCollectionId,
+            queries,
+    );
+
+    return parseStringify(files)
+    } catch (error) {
+        handleError(error, "Failed to fetch the files")
+    }
+}
+
