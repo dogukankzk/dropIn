@@ -783,7 +783,7 @@
   color: var(--color-light-100);
 
   &:hover {
-    background-color: transparent;
+    background-color: #dfdfdf;
   }
 }
 

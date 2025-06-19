@@ -19,8 +19,10 @@ const nextConfig: NextConfig = {
         hostname: "img.freepik.com",
       },
       {
-        protocol: "https",
-        hostname: "cloud.appwrite.io",
+        protocol: 'https',
+        hostname: 'fra.cloud.appwrite.io',
+        port: '',
+        pathname: '/v1/storage/**',
       },
     ],
   },
