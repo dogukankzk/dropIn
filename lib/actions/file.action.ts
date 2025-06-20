@@ -61,7 +61,7 @@ export const uploadFile = async ({
     handleError(error, "Failed to upload file");
   }
 };
-const createQueries = (currentUser: Models.Document) => {
+const createQueries = (currentUser: Models.Document, types: string[], searchText: string, sort: string, limit: number) => {
     console.log('Current user structure:', JSON.stringify(currentUser, null, 2));
     
     // Récupérer les fichiers possédés ET les fichiers partagés
@@ -71,18 +71,29 @@ const createQueries = (currentUser: Models.Document) => {
             Query.contains("users", currentUser.email)       // Fichiers partagés avec cet utilisateur
         ])
     ];
+    if(types.length > 0) queries.push(Query.equal("type", types))
+    if(searchText) queries.push(Query.contains("name", searchText))
+    if(limit) queries.push(Query.limit(limit))
+
+   if (sort) {
+    const [sortBy, orderBy] = sort.split("-");
+
+    queries.push(
+      orderBy === "asc" ? Query.orderAsc(sortBy) : Query.orderDesc(sortBy),
+    );
+  }
     
     return queries;
 }
 
-export const getFile = async () => {
+export const getFile = async ({types = [], searchText = "", sort = '$createdAt-desc', limit}: GetFilesProps) => {
     const {databases} = await createAdminClient()
 
     try {
         const currentUser = await getCurrentUser()
         if(!currentUser) throw new Error("failed to get the current user")
 
-        const queries = await createQueries(currentUser)
+        const queries = createQueries(currentUser, types, searchText, sort, limit)
         
         const files = await databases.listDocuments(
             appwriteConfig.databaseId,
