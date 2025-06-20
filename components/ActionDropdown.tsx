@@ -148,11 +148,11 @@ const path = usePathname()
                     width={24}
                 />
             </DropdownMenuTrigger>
-            <DropdownMenuContent className='bg-gray-100'>
+            <DropdownMenuContent className='bg-white'>
                 <DropdownMenuLabel className='max-w-[200px] truncate'>{file.name}</DropdownMenuLabel>
                 <DropdownMenuSeparator />
                 {actionsDropdownItems.map((actionItem)=>(
-                  <DropdownMenuItem key={actionItem.value} className='shad-dropdown-item' onClick={()=>{
+                  <DropdownMenuItem key={actionItem.value} className='shad-dropdown-item hover:bg-gray-100' onClick={()=>{
                     setAction(actionItem)
                      if (
                         ["rename", "share", "delete", "details"].includes(

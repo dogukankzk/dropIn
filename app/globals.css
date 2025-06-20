@@ -348,7 +348,7 @@
   width: 100%;
   display: flex;
   gap: 0.25rem;
-  justify-content: space-between;
+  justify-content: center;
 
   @media (min-width: 640px) {
     gap: 0.5rem;
