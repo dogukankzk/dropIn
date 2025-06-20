@@ -61,7 +61,7 @@ export const uploadFile = async ({
     handleError(error, "Failed to upload file");
   }
 };
-const createQueries = (currentUser: Models.Document, types: string[], searchText: string, sort: string, limit: number) => {
+const createQueries = (currentUser: Models.Document, types: string[], searchText: string, sort: string, limit?: number) => {
     console.log('Current user structure:', JSON.stringify(currentUser, null, 2));
     
     // Récupérer les fichiers possédés ET les fichiers partagés
