@@ -36,27 +36,29 @@ Développée avec **Next.js 15**, **React 19**, **TypeScript**, **Appwrite** et 
 
 ## 🧪 Lancer le projet en local
 
-1. Cloner le dépôt
-##### git clone https://github.com/dogukankzk/drop-in.git
-cd drop-in
+1. **Cloner le dépôt**
+   ```bash
+   git clone https://github.com/dogukankzk/drop-in.git
+   cd drop-in
 
-2. Installer les dépendances
-npm install
+2. **Installer les dépendances**
+   ```bash
+   npm install
 
-3. Lancer le serveur de développement
-npm run dev
+3. **Lancer le serveur de développement**
+   ```bash
+   npm run dev
 
 ⚠️ Tu dois avoir une instance Appwrite configurée. Renseigne les variables d’environnement via un fichier .env.local.
 
+
 ---
+
 
 ## 🐳 Docker
 
-Build
-docker build -t drop-in .
-
-Run
-docker run -p 3000:3000 drop-in
+Ce projet prend également en charge la conteneurisation avec Docker, permettant une exécution isolée et un déploiement simplifié.
+Vous pouvez builder et lancer l’application dans un environnement Docker pour simuler une production locale ou faciliter la mise en ligne sur des plateformes compatibles.
 
 ---
 
@@ -77,4 +79,3 @@ Le déploiement via Docker et Vercel
 ## 📫 Contact
 GitHub : https://github.com/dogukankzk
 Email : dogukan.kazkondu.dev@gmail.com
-
