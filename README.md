@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📦 DropIn – File Sharing & Storage Platform
 
-## Getting Started
+**Plateforme web fullstack pour la gestion, le partage et l'organisation sécurisée de fichiers.**  
+Développée avec **Next.js 15**, **React 19**, **TypeScript**, **Appwrite** et **TailwindCSS**, cette application propose une expérience moderne, responsive et optimisée grâce à **Docker** et **Vercel**.
 
-First, run the development server:
+---
 
-```bash
+## 🚀 Fonctionnalités clés
+
+- 🔐 Authentification utilisateur (inscription, connexion, déconnexion) via Appwrite  
+- 📁 Upload de fichiers (images, vidéos, documents, audio) avec prévisualisation  
+- 🗂️ Gestion des fichiers : visualiser, renommer, supprimer, trier  
+- 📤 Partage de fichiers via lien unique  
+- 📊 Tableau de bord dynamique : stockage total/utilisé, type de fichiers, dernières actions  
+- 🔎 Recherche globale + tri par date, nom ou taille  
+- 💾 Téléchargement des fichiers en un clic  
+- ⚙️ Déploiement sur Vercel et conteneurisation avec Docker  
+
+---
+
+## 🛠️ Stack technique
+
+| Technologie   | Description                                      |
+|--------------|--------------------------------------------------|
+| Next.js 15   | Framework React moderne et performant            |
+| React 19     | UI réactive avec les dernières features          |
+| Appwrite     | Authentification, base de données, stockage      |
+| TailwindCSS  | Design responsive et moderne                     |
+| TypeScript   | Sécurité de typage et lisibilité du code         |
+| Docker       | Conteneurisation et déploiement simplifié        |
+| Vercel       | Déploiement serverless rapide et fiable          |
+
+---
+
+## 📂 Architecture du projet
+
+├── app/                # Pages Next.js (auth, dashboard, etc.)
+├── components/         # Composants réutilisables UI
+├── lib/                # Actions Appwrite (auth, fichiers)
+├── styles/             # Fichiers CSS globaux (Tailwind)
+├── public/             # Fichiers statiques
+├── Dockerfile          # Configuration Docker
+├── README.md
+└── ...
+
+---
+
+## 🧪 Lancer le projet en local
+
+1. Cloner le dépôt
+git clone https://github.com/dogukankzk/drop-in.git
+cd drop-in
+
+2. Installer les dépendances
+npm install
+
+3. Lancer le serveur de développement
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+⚠️ Tu dois avoir une instance Appwrite configurée. Renseigne les variables d’environnement via un fichier .env.local.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🐳 Docker
 
-## Learn More
+Build
+docker build -t drop-in .
 
-To learn more about Next.js, take a look at the following resources:
+Run
+docker run -p 3000:3000 drop-in
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ✅ À propos
 
-## Deploy on Vercel
+Ce projet a été réalisé dans le cadre d’une préparation à l’alternance CDA (Concepteur Développeur d’Applications). Il met en pratique :
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Le développement fullstack moderne avec React/Next.js
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+La gestion sécurisée de fichiers et d'utilisateurs
+
+L’intégration d’un backend-as-a-service (Appwrite)
+
+Le déploiement via Docker et Vercel
+
+---
+
+## 📫 Contact
+GitHub : https://github.com/dogukankzk
+Email : dogukan.kazkondu.dev@gmail.com
