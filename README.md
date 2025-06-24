@@ -32,19 +32,6 @@ Développée avec **Next.js 15**, **React 19**, **TypeScript**, **Appwrite** et 
 
 ---
 
-## 📂 Architecture du projet
-
-├── app/                # Pages Next.js (auth, dashboard, etc.)
-├── components/         # Composants réutilisables UI
-├── lib/                # Actions Appwrite (auth, fichiers)
-├── styles/             # Fichiers CSS globaux (Tailwind)
-├── public/             # Fichiers statiques
-├── Dockerfile          # Configuration Docker
-├── README.md
-└── ...
-
----
-
 ## 🧪 Lancer le projet en local
 
 1. Cloner le dépôt
