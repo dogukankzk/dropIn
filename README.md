@@ -1,4 +1,6 @@
+
 # 📦 DropIn – File Sharing & Storage Platform
+
 
 **Plateforme web fullstack pour la gestion, le partage et l'organisation sécurisée de fichiers.**  
 Développée avec **Next.js 15**, **React 19**, **TypeScript**, **Appwrite** et **TailwindCSS**, cette application propose une expérience moderne, responsive et optimisée grâce à **Docker** et **Vercel**.
@@ -35,7 +37,7 @@ Développée avec **Next.js 15**, **React 19**, **TypeScript**, **Appwrite** et 
 ## 🧪 Lancer le projet en local
 
 1. Cloner le dépôt
-git clone https://github.com/dogukankzk/drop-in.git
+##### git clone https://github.com/dogukankzk/drop-in.git
 cd drop-in
 
 2. Installer les dépendances
@@ -75,3 +77,4 @@ Le déploiement via Docker et Vercel
 ## 📫 Contact
 GitHub : https://github.com/dogukankzk
 Email : dogukan.kazkondu.dev@gmail.com
+
