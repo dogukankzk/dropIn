@@ -122,14 +122,14 @@ const Dashboard = async () => {
           <div className="empty-state py-12 text-center">
             <div className="mx-auto w-16 h-16 bg-light-200/10 rounded-full flex items-center justify-center mb-4">
               <Image
-                src="/assets/icons/upload.svg"
+                src="public/assets/icons/upload.svg"
                 alt="No files"
                 width={24}
                 height={24}
                 className="opacity-50"
               />
             </div>
-            <p className="empty-list text-light-400 text-base">No files uploaded yet</p>
+            <p className="empty-list text-light-200 text-base">No files uploaded yet</p>
             <p className="text-sm text-light-500 mt-1">Upload your first file to get started</p>
           </div>
         )}
