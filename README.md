@@ -34,6 +34,16 @@ Développée avec **Next.js 15**, **React 19**, **TypeScript**, **Appwrite** et 
 
 ---
 
+## 🌐 Accès en ligne
+
+L'application est déployée sur **Vercel** et accessible publiquement.
+
+👉 Tu peux tester la plateforme ici : [https://drop-in-three.vercel.app/sign-in](https://drop-in-three.vercel.app/sign-in)
+
+Le déploiement utilise les fonctionnalités serverless de Vercel pour garantir rapidité, scalabilité et haute disponibilité.
+
+---
+
 ## 🧪 Lancer le projet en local
 
 1. **Cloner le dépôt**
@@ -51,9 +61,7 @@ Développée avec **Next.js 15**, **React 19**, **TypeScript**, **Appwrite** et 
 
 ⚠️ Tu dois avoir une instance Appwrite configurée. Renseigne les variables d’environnement via un fichier .env.local.
 
-
 ---
-
 
 ## 🐳 Docker
 
